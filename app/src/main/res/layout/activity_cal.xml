@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculate.CalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_first_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text=""
+                android:textSize="30dp" />
+        </ScrollView>
+        <TextView
+            android:id="@+id/tv_second_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:text=""
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:rowCount="5">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btn_bracket"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="( )" />
+
+        <Button
+            android:id="@+id/btn_percent"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/btn_div"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="÷" />
+
+        <Button
+            android:id="@+id/btn_num7"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn_num8"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn_num9"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btn_mul"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="X" />
+
+
+        <Button
+            android:id="@+id/btn_num4"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn_num5"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn_num6"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="-" />
+
+
+        <Button
+            android:id="@+id/btn_num1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_num2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_num3"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="+" />
+
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/btn_num0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_dot"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btn_equal"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="-5dp"
+            android:text="=" />
+
+    </GridLayout>
+
+</LinearLayout>

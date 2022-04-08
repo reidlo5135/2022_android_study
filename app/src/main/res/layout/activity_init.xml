@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.InitActivity">
+
+    <Button
+        android:id="@+id/btn_cal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계산기"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="설문조사"
+        android:textSize="30dp"
+        android:layout_below="@+id/btn_cal"
+        />
+
+    <Button
+        android:id="@+id/btn_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LIST"
+        android:textSize="30dp"
+        android:layout_below="@+id/btn_survey"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textSize="30dp"
+        android:layout_below="@+id/btn_list"/>
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="50dp"
+        android:layout_gravity="bottom"/>
+
+</RelativeLayout>
