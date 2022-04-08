@@ -20,7 +20,6 @@
             android:exported="false" />
         <activity
             android:name=".research.ResearchActivity"
-            android:launchMode="singleTask"
             android:exported="false" />
         <activity
             android:name=".main.SplashActivity"
