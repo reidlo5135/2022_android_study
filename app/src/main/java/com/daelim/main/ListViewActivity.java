@@ -30,7 +30,6 @@ public class ListViewActivity extends AppCompatActivity {
         list.add("골든 스테이트");
         list.add("시카고 불스");
         list.add("브루클린 네츠");
-        list.add("sss");
 
         ArrayAdapter<String> adapter = new ArrayAdapter(activity, android.R.layout.simple_expandable_list_item_1, list);
         listView.setAdapter(adapter);
