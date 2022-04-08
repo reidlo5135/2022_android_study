@@ -41,9 +41,11 @@ public class InitActivity extends AppCompatActivity {
                 case R.id.btn_survey:
                     Intent it2 = new Intent(activity, ResearchActivity.class);
                     startActivity(it2);
+                    break;
                 case R.id.btn_list:
                     Intent it3 = new Intent(activity, ListViewActivity.class);
                     startActivity(it3);
+                    break;
             }
         }
     };
@@ -54,6 +56,7 @@ public class InitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_init);
 
         activity = this;
+
         btn_cal = findViewById(R.id.btn_cal);
         btn_cal.setOnClickListener(click);
 
