@@ -3,6 +3,7 @@ package com.daelim.dialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -63,6 +64,12 @@ public class SharedPreferenceActivity extends AppCompatActivity {
     private void setDialog(String title, String msg) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle(title).setMessage(msg);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                return;
+            }
+        });
         alertDialog = builder.create();
         alertDialog.show();
     }
