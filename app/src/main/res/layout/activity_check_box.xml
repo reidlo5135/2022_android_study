@@ -25,14 +25,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="180dp"
         />
+
     <CheckBox
         android:id="@+id/ch_player2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="클레이 탐슨"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="230dp"
-        />
+        android:text="클레이 탐슨" />
     <CheckBox
         android:id="@+id/ch_player3"
         android:layout_width="wrap_content"

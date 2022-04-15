@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.daelim.R;
 import com.daelim.calculate.CalActivity;
+import com.daelim.dialog.SharedPreferenceActivity;
 import com.daelim.research.ResearchActivity;
 
 public class InitActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class InitActivity extends AppCompatActivity {
     private Button btn_next;
     private Button btn_survey;
     private Button btn_list;
+    private Button btn_shared;
 
     View.OnClickListener click = new View.OnClickListener() {
         @Override
@@ -45,6 +47,10 @@ public class InitActivity extends AppCompatActivity {
                 case R.id.btn_list:
                     Intent it3 = new Intent(activity, ListViewActivity.class);
                     startActivity(it3);
+                    break;
+                case R.id.btn_shared:
+                    Intent it4 = new Intent(activity, SharedPreferenceActivity.class);
+                    startActivity(it4);
                     break;
             }
         }
@@ -68,6 +74,9 @@ public class InitActivity extends AppCompatActivity {
 
         btn_list = findViewById(R.id.btn_list);
         btn_list.setOnClickListener(click);
+
+        btn_shared = findViewById(R.id.btn_shared);
+        btn_shared.setOnClickListener(click);
 
         tv_data = findViewById(R.id.tv_data);
         Intent intent = new Intent();

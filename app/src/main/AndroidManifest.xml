@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReidloKang">
         <activity
+            android:name=".dialog.SharedPreferenceActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.ListViewActivity"
             android:exported="false" />
         <activity

@@ -1,13 +1,13 @@
 package com.daelim.research;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.daelim.R;
 import com.daelim.main.ResultActivity;
@@ -36,6 +36,7 @@ public class CheckBoxActivity extends AppCompatActivity {
         setContentView(R.layout.activity_check_box);
 
         activity = this;
+        Intent intent2 = new Intent(activity, ResultActivity.class);
 
         Intent intent = getIntent();
         String team = intent.getStringExtra("team");
@@ -48,6 +49,7 @@ public class CheckBoxActivity extends AppCompatActivity {
         checkBoxes[2] = findViewById(R.id.ch_player3);
         checkBoxes[3] = findViewById(R.id.ch_player4);
         checkBoxes[4] = findViewById(R.id.ch_player5);
+        btn_submit = findViewById(R.id.btn_submit);
 
         for(int i = 0;i<checkBoxes.length;i++) {
             if(team.equals("gs") || team == null) {
@@ -74,15 +76,31 @@ public class CheckBoxActivity extends AppCompatActivity {
 
             System.out.println("players : " + players);
             System.out.println("split : " + split[i]);
-        }
 
-        btn_submit = findViewById(R.id.btn_submit);
-        btn_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent(activity, ResultActivity.class);
-                startActivity(intent1);
-            }
-        });
+            final String[] fav = new String[5];
+
+            checkBoxes[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    for (int j=0;j<checkBoxes.length;j++) {
+                        if(checkBoxes[j].isChecked()) {
+                            String str = checkBoxes[j].getText().toString();
+                            fav[j] = str;
+                            System.out.println("fav player : "+ Arrays.toString(fav));
+                            intent2.putExtra("fav", fav);
+                        }
+                    }
+                }
+            });
+
+            btn_submit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    intent2.putExtra("team", team);
+                    startActivity(intent2);
+                }
+            });
+
+        }
     }
 }
