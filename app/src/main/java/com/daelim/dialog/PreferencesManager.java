@@ -32,7 +32,6 @@ public class PreferencesManager {
         editor.putString(key, value);
 
         editor.commit();
-
     }
 
     public static void setBoolean(Context context, String key, boolean value) {
@@ -43,7 +42,6 @@ public class PreferencesManager {
         editor.putBoolean(key, value);
 
         editor.commit();
-
     }
 
     public static void setInt(Context context, String key, int value) {
@@ -54,7 +52,6 @@ public class PreferencesManager {
         editor.putInt(key, value);
 
         editor.commit();
-
     }
 
     public static void setLong(Context context, String key, long value) {
@@ -65,7 +62,6 @@ public class PreferencesManager {
         editor.putLong(key, value);
 
         editor.commit();
-
     }
 
     public static void setFloat(Context context, String key, float value) {
@@ -76,7 +72,6 @@ public class PreferencesManager {
         editor.putFloat(key, value);
 
         editor.commit();
-
     }
 
     public static String getString(Context context, String key) {
@@ -85,7 +80,6 @@ public class PreferencesManager {
         String value = prefs.getString(key, DEFAULT_VALUE_STRING);
 
         return value;
-
     }
 
     public static boolean getBoolean(Context context, String key) {
@@ -94,7 +88,6 @@ public class PreferencesManager {
         boolean value = prefs.getBoolean(key, DEFAULT_VALUE_BOOLEAN);
 
         return value;
-
     }
 
     public static int getInt(Context context, String key) {
@@ -103,7 +96,6 @@ public class PreferencesManager {
         int value = prefs.getInt(key, DEFAULT_VALUE_INT);
 
         return value;
-
     }
 
     public static long getLong(Context context, String key) {
@@ -112,7 +104,6 @@ public class PreferencesManager {
         long value = prefs.getLong(key, DEFAULT_VALUE_LONG);
 
         return value;
-
     }
 
     public static float getFloat(Context context, String key) {
@@ -121,7 +112,6 @@ public class PreferencesManager {
         float value = prefs.getFloat(key, DEFAULT_VALUE_FLOAT);
 
         return value;
-
     }
 
     public static void removeKey(Context context, String key) {
@@ -132,7 +122,6 @@ public class PreferencesManager {
         edit.remove(key);
 
         edit.commit();
-
     }
 
     public static void clear(Context context) {
@@ -143,6 +132,5 @@ public class PreferencesManager {
         edit.clear();
 
         edit.commit();
-
     }
 }
