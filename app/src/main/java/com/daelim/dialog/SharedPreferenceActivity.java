@@ -18,6 +18,7 @@ public class SharedPreferenceActivity extends AppCompatActivity {
     private EditText et_value;
     private Button btn_save;
     private Button btn_check_value;
+
     private AlertDialog alertDialog;
 
     @Override
