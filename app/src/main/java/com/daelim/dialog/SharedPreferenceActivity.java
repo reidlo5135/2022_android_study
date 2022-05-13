@@ -1,13 +1,13 @@
 package com.daelim.dialog;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.daelim.R;
 
@@ -18,7 +18,6 @@ public class SharedPreferenceActivity extends AppCompatActivity {
     private EditText et_value;
     private Button btn_save;
     private Button btn_check_value;
-
     private AlertDialog alertDialog;
 
     @Override
