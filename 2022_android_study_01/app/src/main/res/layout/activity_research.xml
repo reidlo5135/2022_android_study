@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".research.ResearchActivity">
+
+    <RadioGroup
+        android:id="@+id/rd_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        >
+        <RadioButton
+            android:id="@+id/rd_gs"
+            android:text="골든 스테이트"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginTop="40dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rd_bulls"
+            android:text="시카고 불스"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rd_bnets"
+            android:text="브루클린 네츠"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/img_survey"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/gs"
+        android:layout_below="@+id/rd_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"
+        android:text="NEXT" />
+
+</RelativeLayout>

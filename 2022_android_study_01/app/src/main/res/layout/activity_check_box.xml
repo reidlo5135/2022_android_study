@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".research.CheckBoxActivity">
+
+    <ImageView
+        android:id="@+id/img_team"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gs"
+        android:layout_marginTop="50dp"
+        />
+
+    <CheckBox
+        android:id="@+id/ch_player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스테픈 커리"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        />
+
+    <CheckBox
+        android:id="@+id/ch_player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:text="클레이 탐슨" />
+    <CheckBox
+        android:id="@+id/ch_player3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="조던 풀"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:layout_alignLeft="@+id/ch_player1"
+        />
+    <CheckBox
+        android:id="@+id/ch_player4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="드레이먼드 그린"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:layout_alignLeft="@+id/ch_player1"
+        />
+    <CheckBox
+        android:id="@+id/ch_player5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="케본 루니"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:layout_alignLeft="@+id/ch_player1"
+        />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"
+        android:text="SUBMIT"
+        />
+
+
+</RelativeLayout>
