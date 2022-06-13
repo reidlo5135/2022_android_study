@@ -4,15 +4,18 @@ public class ChatVO {
 
     private int type;
     private String id;
-    private String time;
     private String content;
 
     public ChatVO(){}
 
-    public ChatVO(int type, String id, String time, String content) {
+    public ChatVO(int type, String id) {
         this.type = type;
         this.id = id;
-        this.time = time;
+    }
+
+    public ChatVO(int type, String id, String content) {
+        this.type = type;
+        this.id = id;
         this.content = content;
     }
 
@@ -32,11 +35,11 @@ public class ChatVO {
         this.content = content;
     }
 
-    public String getTime() {
-        return time;
+    public int getType() {
+        return type;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setType(int type) {
+        this.type = type;
     }
 }

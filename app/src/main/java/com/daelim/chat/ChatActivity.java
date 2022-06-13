@@ -10,8 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.daelim.R;
+import com.daelim.user.LoginActivity;
 import com.daelim.utils.PreferencesManager;
 
 import org.java_websocket.client.WebSocketClient;
@@ -49,12 +51,10 @@ public class ChatActivity extends AppCompatActivity {
         btn_send = findViewById(R.id.btn_send);
         lv_chat = findViewById(R.id.lv_chat);
 
-        String nowtime = new SimpleDateFormat("HH:mm:ss").format(new Date());
-
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ws.send("CHAT|" + id + "|" + nowtime + "|" + et_chat.getText().toString());
+                ws.send("CHAT|" + id + "|" + et_chat.getText().toString());
                 et_chat.setText("");
             }
         });
@@ -71,6 +71,7 @@ public class ChatActivity extends AppCompatActivity {
                 @Override
                 public void onOpen(ServerHandshake serverHandshake) {
                     Log.e("!!!", "onOpen");
+                    ws.send("LOGIN|" + id);
                 }
 
                 @Override
@@ -78,14 +79,27 @@ public class ChatActivity extends AppCompatActivity {
                     Log.e("!!!", "onMessage s : " + s);
                     String[] str = s.split("\\|");
                     Log.e("!!!", "onMessage str : " + str[0]);
-                    list.add(new ChatVO(1, str[1], str[2], str[3]));
-                    Log.e("!!!", "onMessage list : " + list);
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            adapter.notifyDataSetChanged();
+
+                    if(str[0].equals("LOGIN")) {
+                        Log.e("!!!", "onMessage LOGIN MODE");
+                        list.add(new ChatVO(2, str[1]));
+                    } else if(str[0].equals("CHAT")) {
+                        if(str[1].equals(id)){
+                            list.add(new ChatVO(1, str[1], str[2]));
+                        } else {
+                            list.add(new ChatVO(0, str[1], str[2]));
                         }
-                    });
+                        Log.e("!!!", "onMessage list : " + list);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                adapter.notifyDataSetChanged();
+                            }
+                        });
+                    } else if(str[0].equals("LOGOUT")) {
+                        Intent intent = new Intent(activity, LoginActivity.class);
+                        startActivity(intent);
+                    }
                 }
 
                 @Override
